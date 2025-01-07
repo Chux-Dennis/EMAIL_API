@@ -4,7 +4,7 @@ const sendMailSchema = Joi.object({
   name: Joi.string().required(),
   email: Joi.string().email(),
   number: Joi.any(),
-  subject: Joi.string().required(),
+  subject: Joi.string(),
   message: Joi.string().required(),
 });
 
