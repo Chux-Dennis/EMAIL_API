@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import sendMail from "./middleware/transporterRoute";
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 
