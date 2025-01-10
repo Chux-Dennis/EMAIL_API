@@ -1,9 +1,11 @@
 import express, { Request, Response } from "express";
+import cors from "cors";
 import sendMail from "./middleware/transporterRoute";
 const app = express();
 const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (req: Request, res: Response) => {
   res.status(200).send({
